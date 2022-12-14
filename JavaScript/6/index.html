@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+        }
+        div{
+            float: left;
+            margin: 25px;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -42,5 +51,35 @@
             </table>
         </div>
     </div>
+
+
+    <script>
+        var mailler = 
+        [
+            mail={ID:1, Gonderen:"Ali", GondermeTarihi:"15.12.2022", Baslik:"adsdsaddad 1", Konu:"sdasdasdasd 1"},
+            mail = { ID: 2, Gonderen: "Batu", GondermeTarihi: "15.12.2022", Baslik: "Basadsaasdlik 2", Konu: "adsasdsad 2" },
+            mail = { ID: 3, Gonderen: "Ali", GondermeTarihi: "15.12.2022", Baslik: "asdasdas 3", Konu: "adsadsa 3" },
+            mail = { ID: 4, Gonderen: "Veli", GondermeTarihi: "15.12.2022", Baslik: "asdasdas 4", Konu: "asdasd 4" },
+        ]
+
+
+        var tablo = document.getElementById("tablo");
+        var kisi = document.getElementById("kisi");
+        var baslik = document.getElementById("baslik");
+        var konu = document.getElementById("konu");
+
+        mailler.forEach(e=>{
+            var satir = "<tr><td>" +e.ID +"</td><td>" + e.Gonderen + "</td><td>" + e.GondermeTarihi + "</td><td><button onclick="Goster("+e.ID+")">Göster</button></tr></td>";
+            tablo.innerHTML += satir;
+        });
+
+        function Goster(id){
+            var index = mailler.findIndex(mail=>mail.ID==id);
+            kisi.innerHTML = mailler[index].Gonderen;
+            baslik.innerHTML = mailler[index].Baslik;
+            konu.innerHTML = mailler[index].Konu;
+        }
+
+    </script>
 </body>
 </html>
