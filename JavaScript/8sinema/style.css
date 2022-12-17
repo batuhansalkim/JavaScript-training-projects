@@ -2,6 +2,7 @@ body{
     background-color: #292929;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     margin: 0;
@@ -13,6 +14,10 @@ body{
     width: 15px;
     margin: 3px;
     border-radius: 5px;
+}
+.seat:not(.reserved):hover{
+    cursor: pointer;
+    transform: scale(1.3);
 }
 
 .seat.selected{
@@ -33,5 +38,67 @@ body{
 .row{
     display: flex;
 }
+.screen{
+    background: white;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0px;
+    box-shadow:0 3px 8px rgba(255, 255, 255, 0.4) ;
+}
+
+.movie-list{
+    margin: 20px 0;
+}
+.movie-list #movie{
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+} 
+#movie option{
+    background-color: black;
+    color: white;
+}
+
+.info{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    color: #777;
+    display: flex;
+}
+.info li{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:0 10px;
+}
+p.text span{
+    color:white;
+}  
+
+p.text{
+    color:rgb(145, 60, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-        <h1>Batuhan Salkım</h1>
+        
         <div class="screen"></div>
 
         <div class="row">
@@ -69,6 +69,32 @@
         </div>
     </div>
 
+    <div class="movie-list">
+        <select id="movie">
+            <option disabled>Film Seçiniz</option>
+            <option value="40">Avatar: Suyun Yolu</option>
+            <option value="50">Vahşi Gece</option>
+            <option value="60">Kurak Günler</option>
+        </select>
+    </div>
+
+    <ul class="info">
+        <li>
+            <div class="seat selected"></div>
+            <small>Seçili</small>
+        </li>
+        <li>
+            <div class="seat"></div>
+            <small>Boş</small>
+        </li>
+        <li>
+            <div class="seat reserved"></div>
+            <small>Dolu</small>
+        </li>
+    </ul>
+    <p class="text">
+        <span id="count">3</span> adet koltuk için hesaplanan ücret <span id="amount">90</span> TL.
+    </p>
 
     <script src="hex.js"></script>
     
