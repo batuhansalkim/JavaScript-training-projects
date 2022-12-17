@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        span{
+            font-size: 4rem;
+            color: white;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            width: 200px;
+            height: 30px;
+            margin: 2px 0;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+       }
+       #arttir:hover{
+        background: green;
+        color: white;
+       }
+       #azalt:hover{
+        background: red;
+        color: white;
+       }
+       #reset:hover{
+        background: darkblue;
+        color: aqua;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="deger">0</span>
+        <button id="arttir">Arttır</button>
+        <button id="azalt">Azalt</button>
+        <button id="reset">Sıfırla</button>
+    </div>
+
+    <script>
+        let arti = document.getElementById("arttir");
+        let azalt = document.getElementById("azalt");
+        let sifirla = document.getElementById("reset");
+        let deger = document.getElementById("deger");
+
+
+        let degerim = 0;
+
+
+        arti.addEventListener("click",function(){
+            degerim++;
+            deger.innerHTML = degerim;
+            if(degerim>20){
+                window.alert("Çok basma kanka yeter ");
+                deger.innerHTML=20;
+            }
+        });
+
+        azalt.addEventListener("click",function(){
+            degerim--;
+            deger.innerHTML=degerim;
+            if(degerim<0){
+                alert("Yeter artık degeri azaltma kanka :)")
+                deger.innerHTML=0;
+            }
+        })
+    </script>
+</body>
+</html>

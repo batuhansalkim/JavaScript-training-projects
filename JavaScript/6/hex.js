@@ -22,24 +22,46 @@ var arabalar = [
 
 ]
 
-var index = 1;
+var index = 2;
+var slaytCount = arabalar.length;
 
-document.querySelector("fas fa-arrow-circle-left").addEventListener("click",function(){
+
+showSlide(index);
+document.querySelector(".fa-arrow-circle-left").addEventListener("click",function(){
     index--;
+    showSlide(index);
+    console.log(index);
 })
 
-
-
-document.querySelector("fas fa-arrow-circle-right").addEventListener("click", function () {
+document.querySelector(".fa-arrow-circle-right").addEventListener("click",function(){
     index++;
+    showSlide(index);
+    console.log(index);
 })
 
+function showSlide(index){
 
-document.querySelector(".card-title").textContent = arabalar[index].name;
 
-document.querySelector(".card-img-top").setAttribute("src",arabalar[index].image);
+    if(index<0){
+        index = slaytCount -1;
+    }
+    else if(index > slaytCount){
+        index = 0;
+    }
+    
 
-document.querySelector(".card-link").setAttribute("href",arabalar[index].link);
+
+    document.querySelector(".card-title").textContent = arabalar[index].name;
+
+    document.querySelector(".card-img-top").setAttribute("src",arabalar[index].image);
+
+    document.querySelector(".card-link").setAttribute("href",arabalar[index].link);
+}
+
+
+
+
+
 
 
 
