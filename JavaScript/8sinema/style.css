@@ -4,10 +4,11 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
     
 }
 .seat{
-    background-color: #4444;
+    background-color: rgba(163, 163, 163, 0.267);
     height: 15px;
     width: 15px;
     margin: 3px;
